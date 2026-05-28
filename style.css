@@ -225,4 +225,31 @@ body {
     .portrait {
         aspect-ratio: 4 / 5; 
     }
+    
+}
+
+/* --- Language Toggle --- */
+.lang-toggle {
+    display: inline-block;
+    margin-left: 3rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.active-lang {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.lang-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lang-link:hover {
+    color: var(--text-primary);
 }
