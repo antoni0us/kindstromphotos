@@ -262,3 +262,69 @@ body {
     object-fit: cover; 
     display: block;
 }
+
+/* --- JS Fade-In Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Round Profile Picture --- */
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Upgraded Email Button --- */
+.email-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: var(--bg-dark);
+    background-color: var(--text-primary);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: none; /* Removes the old underline */
+}
+
+.email-link:hover {
+    transform: translateY(-4px);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+/* --- Social Icons --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-muted);
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover svg {
+    fill: var(--text-primary);
+    transform: scale(1.15);
+}
