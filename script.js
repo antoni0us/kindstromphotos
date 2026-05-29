@@ -88,3 +88,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// --- Gallery Filtering ---
+document.addEventListener("DOMContentLoaded", () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove the active underline from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add the underline to the clicked button
+                btn.classList.add('active');
+
+                // Get the category we want to filter by
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Loop through all images and hide/show them based on category
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
+});

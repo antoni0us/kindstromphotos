@@ -34,25 +34,66 @@
     </header>
 
     <main>
-        <section class="gallery-container" style="padding-top: 12vw;"> 
+        <section class="portfolio-header fade-in">
+            <h1>Portfolio</h1>
+            <p>A curated collection of my work. All images displayed here are compressed WebP files for optimal performance. Full-resolution originals are available on Flickr.</p>
+            <a href="https://www.flickr.com/" target="_blank" class="flickr-btn">View on Flickr</a>
+        </section>
+
+        <section class="gallery-container"> 
+            <div class="gallery-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="aviation">Aviation</button>
+                <button class="filter-btn" data-filter="general">General</button>
+            </div>
+
             <div class="gallery-grid">
-                <div class="gallery-item span-12 cinematic fade-in">
-                    <span class="placeholder-text">Cinematic Wide Image</span>
+                <div class="gallery-item span-12 cinematic fade-in" data-category="aviation">
+                    <span class="placeholder-text">Cinematic Wide Image (Aviation)</span>
                 </div>
                 
-                <div class="gallery-item span-8 landscape fade-in">
-                    <span class="placeholder-text">Landscape Image</span>
+                <div class="gallery-item span-8 landscape fade-in" data-category="general">
+                    <span class="placeholder-text">Landscape Image (General)</span>
                 </div>
-                <div class="gallery-item span-4 portrait fade-in">
-                    <img src="portrait-image-1.webp" alt="Test image">
+                <div class="gallery-item span-4 portrait fade-in" data-category="aviation">
+                    <span class="placeholder-text">Portrait Image (Aviation)</span>
                 </div>
                 
-                <div class="gallery-item span-4 portrait fade-in">
-                    <span class="placeholder-text">Portrait Image</span>
+                <div class="gallery-item span-4 portrait fade-in" data-category="general">
+                    <img src="portrait-image-1.webp" alt="Paragliding">
                 </div>
-                <div class="gallery-item span-8 landscape fade-in">
-                    <span class="placeholder-text">Landscape Image</span>
+                <div class="gallery-item span-8 landscape fade-in" data-category="general">
+                    <span class="placeholder-text">Landscape Image (General)</span>
                 </div>
+
+                <div class="gallery-item span-4 portrait fade-in" data-category="aviation">
+                    <span class="placeholder-text">Portrait Image (Aviation)</span>
+                </div>
+                <div class="gallery-item span-4 portrait fade-in" data-category="general">
+                    <span class="placeholder-text">Portrait Image (General)</span>
+                </div>
+                <div class="gallery-item span-4 portrait fade-in" data-category="aviation">
+                    <span class="placeholder-text">Portrait Image (Aviation)</span>
+                </div>
+
+                <div class="gallery-item span-12 cinematic fade-in" data-category="general">
+                    <span class="placeholder-text">Cinematic Wide Image (General)</span>
+                </div>
+
+                <div class="gallery-item span-8 landscape fade-in" data-category="general">
+                    <span class="placeholder-text">Landscape Image (General)</span>
+                </div>
+                <div class="gallery-item span-4 portrait fade-in" data-category="general">
+                    <span class="placeholder-text">Portrait Image (General)</span>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-outro fade-in">
+            <h2>You have reached the end for now.</h2>
+            <p>More pictures are coming soon. In the meantime, you can explore an extended collection of my daily captures and highest-resolution exports on my social channels.</p>
+            <div class="portfolio-outro-links">
+                <a href="https://www.flickr.com/" target="_blank">Flickr</a>
+                <a href="https://www.instagram.com/kindstromphotos/" target="_blank">Instagram</a>
             </div>
         </section>
     </main>
@@ -76,7 +117,7 @@
                 </a>
             </div>
             
-            <p class="copyright">&copy; 2026 Kindström Photos. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Anton Kindström. All rights reserved.</p>
             <p class="copyright" style="margin-top: 0.5rem; opacity: 0.6; text-transform: lowercase;">built from scratch, hosted by github :)</p>
         </div>
     </footer>

@@ -323,6 +323,129 @@ body {
     line-height: 1.7;
 }
 
+/* --- Portfolio Header --- */
+.portfolio-header {
+    padding: 15vw 4vw 2vw; /* Huge top padding to clear your sticky menu */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* --- Portfolio Buttons & Filters --- */
+.flickr-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bg-dark);
+    background-color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Portfolio Outro --- */
+.portfolio-outro {
+    text-align: center;
+    padding: 6vw 4vw 8vw;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.portfolio-outro h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.portfolio-outro p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.portfolio-outro-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.portfolio-outro-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-outro-links a:hover {
+    color: var(--text-muted);
+    border-color: var(--text-muted);
+}
+
+.flickr-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3vw;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+/* Hides images when filtered out */
+.gallery-item.hidden {
+    display: none;
+}
+
 /* --- Asymmetric 12-Column Gallery --- */
 .gallery-container {
     padding: 8vw 4vw;
