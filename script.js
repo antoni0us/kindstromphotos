@@ -117,3 +117,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// --- Custom Cursor Logic ---
+document.addEventListener("DOMContentLoaded", () => {
+    // Only run on non-touch devices
+    if (window.matchMedia("(pointer: fine)").matches) {
+        const cursor = document.createElement('div');
+        cursor.classList.add('custom-cursor');
+        document.body.appendChild(cursor);
+
+        // Make cursor follow mouse
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Expand cursor when hovering over clickable things
+        const hoverElements = document.querySelectorAll('a, button, .gallery-item img');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+    }
+});
