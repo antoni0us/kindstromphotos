@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kindström Photos | Graphic design & Photography</title>
+    <title>KindströmPhotos | Graphic design & Photography</title>
     <meta name="description" content="Welcome to KindstromPhotos! Made by Anton Kindström.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,8 +12,15 @@
 <body>
 
     <header class="site-header">
-        <div class="logo">KINDSTRÖM<span>PHOTOS</span></div>
-        <nav class="site-nav">
+        <a href="/" class="logo">KINDSTRÖM<span>PHOTOS</span></a>
+        
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
             <a href="/">Home</a>
             <a href="/portfolio">Portfolio</a>
             <a href="/#about">About me</a>
@@ -21,47 +28,66 @@
             
             <div class="lang-toggle">
                 <span class="active-lang">🇬🇧 EN</span>
-                <a href="/sv" class="lang-link" style="margin-left: 8px;">🇸🇪 SV</a>
+                <a href="/sv" class="lang-link">🇸🇪 SV</a>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-image-placeholder">
-                <img src="essignen.webp" alt="Essingeleden Hero Shot">
+            <div class="hero-slider">
+                <div class="slide-track">
+                    <img src="scroll-1.webp" alt="Photography feature 1">
+                    <img src="scroll-2.webp" alt="Photography feature 2">
+                    <img src="scroll-3.webp" alt="Photography feature 3">
+                    <img src="scroll-4.webp" alt="Photography feature 4">
+                    <img src="scroll-1.webp" alt="Photography feature 1 Duplicate">
+                </div>
+                <div class="slider-overlay"></div>
             </div>
+            
             <div class="hero-overlay fade-in">
-                <h1>COMING SOON...</h1>
-                <p>This Site is under construction</p>
+                <h1><span id="typewriter-text"></span><span class="cursor">|</span></h1>
+                <p>Photography & Graphic Design</p>
+                <a href="/portfolio" class="hero-btn">View Portfolio</a>
             </div>
         </section>
 
         <section id="about" class="about-section fade-in">
-            <div class="about-content">
+            <div class="about-grid">
                 <img src="profile.jpg" alt="Anton Kindström" class="profile-pic">
-                <h2>Behind the Lens</h2>
-                <p>Focusing on the precise details of aviation, from custom digital liveries to high-speed captures. This portfolio represents a dedication to visual storytelling, emphasizing stark contrasts, metallic textures, and vibrant atmospheres.</p>
+                <div class="about-text-content">
+                    <h2>Anton Kindström</h2>
+                    <h3 class="about-subtitle">Photographer & Graphic Design Student</h3>
+                    <p>Hi, I am Anton. I am a photographer and a graphic design student in Stockholm. Photography has been my hobby since childhood with capturing mostly aviation. Today, this hobby has transformed into a passion to learing and mastering any kind of photography.</p>
+                    <p style="margin-top: 1rem;">To me, photography isn't enough. I've spend hours in Lightroom and other designing applications to get the best possible results with color grading and other editing skills, trying to make the picture perfect. No matter what kind of photography or graphic design work I am involved with, the aim remains the same – capturing picture that tells a story.</p>
+                </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer id="contact" class="site-footer fade-in">
         <div class="footer-content">
-            <h2>Let's create something exceptional.</h2>
+            <h2>Let's get in touch!</h2>
+            <p class="contact-subtext">Got a project in mind? Want help with anything? My inbox is always open!</p>
+            
             <a href="mailto:contact@kindstromphotos.com" class="email-link">Email Me</a>
             
-            <!-- Social Media Icons -->
             <div class="social-links">
-                <a href="#" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/kindstromphotos/" target="_blank" aria-label="Instagram">
                     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <a href="https://www.flickr.com/" target="_blank" aria-label="Flickr">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="7" cy="12" r="4.5" />
+                        <circle cx="17" cy="12" r="4.5" />
+                    </svg>
                 </a>
             </div>
             
             <p class="copyright">&copy; 2026 Kindström Photos. All rights reserved.</p>
+            <p class="copyright" style="margin-top: 0.5rem; opacity: 0.6; text-transform: lowercase;">built from scratch, hosted by github :)</p>
         </div>
     </footer>
 
